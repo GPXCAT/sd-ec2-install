@@ -9,7 +9,7 @@ ec2 run-instances \
     --instance-market-options '{"MarketType":"spot","SpotOptions":{"InstanceInterruptionBehavior":"terminate","MaxPrice":"0.2","SpotInstanceType":"one-time"}}' \
     --block-device-mappings '{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":10,"VolumeType":"gp3"}}' \
     --region us-east-1 \
-    --user-data '#! /bin/bash
-        bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/install.sh)
-    ' \
     --output table
+    # --user-data '#! /bin/bash
+    #     bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/install.sh)
+    # ' \
