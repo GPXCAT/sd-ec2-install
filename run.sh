@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # 格式化內建的儲存區
-USER=$(whoami)
+USER=ubuntu
 HOME_DIR=/home/${USER}
+SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 
 # 執行
-cd ${HOME_DIR}/stable-diffusion-webui
+cd ${SDW_DIR}
 ./webui.sh --listen --xformers

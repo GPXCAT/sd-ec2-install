@@ -11,8 +11,6 @@ ${AWS_CLI} ec2 run-instances \
     --block-device-mappings '{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":100,"VolumeType":"gp3"}}' \
     --region us-east-1 \
     --user-data '#! /bin/bash
-        sudo apt install -y wget curl aria2
-        bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/download_models.sh) &
         bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/install.sh)
     ' \
     --output table

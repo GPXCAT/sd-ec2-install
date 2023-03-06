@@ -1,8 +1,9 @@
 #!/bin/sh
 
-# 格式化內建的儲存區
-USER=$(whoami)
+# 系統變數
+USER=ubuntu
 HOME_DIR=/home/${USER}
+SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 ARCH=$(arch)
 DRIVER_BASE_URL=https://us.download.nvidia.com/tesla
 DRIVER_VERSION=525.85.12
@@ -23,13 +24,16 @@ sudo sh NVIDIA-Linux-$ARCH-$DRIVER_VERSION.run -s
 cd ${HOME_DIR}
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
+# 同步安裝模型檔
+bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/download_models.sh) &
+
 # 安裝外掛模組
-cd ${HOME_DIR}/stable-diffusion-webui/extensions
+cd ${SDW_DIR}/extensions
 git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 git clone https://github.com/civitai/sd_civitai_extension.git
 git clone https://github.com/jexom/sd-webui-depth-lib.git
 
 # 執行
-cd ${HOME_DIR}/stable-diffusion-webui
+cd ${SDW_DIR}
 ./webui.sh --listen --xformers

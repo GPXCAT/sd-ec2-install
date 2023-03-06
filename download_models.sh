@@ -1,11 +1,12 @@
 #!/bin/sh
 
-# 格式化內建的儲存區
-USER=$(whoami)
+# 系統變數
+USER=ubuntu
 HOME_DIR=/home/${USER}
+SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 
 # 安裝模型[CHECKPOINT TRAINED]
-MODEL_CHECKPOINT_DIR=${HOME_DIR}/stable-diffusion-webui/models/Stable-diffusion
+MODEL_CHECKPOINT_DIR=${SDW_DIR}/models/Stable-diffusion
 mkdir -p $MODEL_CHECKPOINT_DIR
 # [AbyssOrangeMix3] https://civitai.com/models/9942
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/11814 -d ${MODEL_CHECKPOINT_DIR} -o AOM3.safetensors
@@ -31,7 +32,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/6987 -d ${MODEL_CHECKPOINT_DIR} -o realisticVisionV13_v13.safetensors
 
 # 安裝模型[LORA]
-MODEL_LORA_DIR=${HOME_DIR}/stable-diffusion-webui/models/Lora
+MODEL_LORA_DIR=${SDW_DIR}/models/Lora
 mkdir -p $MODEL_LORA_DIR
 # [墨心 MoXin] https://civitai.com/models/12597
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/14856 -d ${MODEL_LORA_DIR} -o Moxin_10.safetensors
@@ -49,7 +50,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Ano
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7974 -d ${MODEL_LORA_DIR} -o arknightsTexasThe_v10.safetensors
 
 # 安裝模型[ControlNet]
-MODEL_CONTROLNET_DIR=${HOME_DIR}/stable-diffusion-webui/models/ControlNet
+MODEL_CONTROLNET_DIR=${SDW_DIR}/models/ControlNet
 mkdir -p $MODEL_CONTROLNET_DIR
 # [ControlNet] https://huggingface.co/lllyasviel/ControlNet
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_canny.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_canny.pth
