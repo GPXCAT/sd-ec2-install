@@ -2,7 +2,7 @@
 
 # 格式化內建的儲存區
 USER=ubuntu
-HOME_DIR=/home/${USER}
+HOME_DIR=/data
 SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 
 # 執行

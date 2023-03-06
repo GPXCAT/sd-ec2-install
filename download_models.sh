@@ -2,7 +2,7 @@
 
 # 系統變數
 USER=ubuntu
-HOME_DIR=/home/${USER}
+HOME_DIR=/data
 SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 
 # 安裝模型[CHECKPOINT TRAINED]

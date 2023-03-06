@@ -2,11 +2,19 @@
 
 # 系統變數
 USER=ubuntu
-HOME_DIR=/home/${USER}
+HOME_DIR=/data
 SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 ARCH=$(arch)
 DRIVER_BASE_URL=https://us.download.nvidia.com/tesla
 DRIVER_VERSION=525.85.12
+
+# 內建的nvme1
+sudo file -s /dev/nvme1n1
+sudo mkfs -t xfs /dev/nvme1n1
+sudo mkdir /data
+sudo mount /dev/nvme1n1 /data
+sudo chmod 777 /data
+echo '/dev/nvme1n1 /data ext4 discard,defaults,nofail 0 2' | sudo tee -a /etc/fstab
 
 # 安裝系統套件
 sudo apt update
