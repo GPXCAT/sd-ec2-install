@@ -50,6 +50,8 @@ git clone https://github.com/Mikubill/sd-webui-controlnet.git
 git clone https://github.com/civitai/sd_civitai_extension.git
 git clone https://github.com/jexom/sd-webui-depth-lib.git
 git clone https://github.com/camenduru/sd-civitai-browser.git
+git clone https://github.com/camenduru/stable-diffusion-webui-images-browser.git
+git clone https://github.com/camenduru/deforum-for-automatic1111-webui.git
 
 # 執行
 cd ${SDW_DIR}
