@@ -31,42 +31,42 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/in
 bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/download_models.sh)
 ```
 
-## EC2 instances g4dn.xlarge 的 On-Demand 與 SPOT 價錢參考
+## EC2 instances g4dn.xlarge(Linux) 的 On-Demand 與 SPOT 價錢參考
 @2023-03-07查詢
 |Region Code   |Region Name              |On-Demand|SPOT    |
 |--------------|-------------------------|---------|--------|
 **North America**
 |us-east-1     |US East (N. Virginia)    |  $0.5260| $0.1578|
-|us-east-2     |US East (Ohio)           |  XXX| XX|
-|us-west-1     |US West (N. California)  |  XXX| XX|
-|us-west-2     |US West (Oregon)         |  XXX| XX|
-|ca-central-1  |Canada (Central)         |  XXX| XX|
-|us-gov-east-1 |AWS GovCloud (US-East)   |  XXX| XX|
-|us-gov-west-1 |AWS GovCloud (US-West)   |  XXX| XX|
+|us-east-2     |US East (Ohio)           |  $0.5260| $0.1578|
+|us-west-1     |US West (N. California)  |  $0.6310| $0.1893|
+|us-west-2     |US West (Oregon)         |  $0.5260| $0.1679|
+|ca-central-1  |Canada (Central)         |  $0.5840| $0.1752|
+|us-gov-east-1 |AWS GovCloud (US-East)   |  $0.6630|       -|
+|us-gov-west-1 |AWS GovCloud (US-West)   |  $0.6630|       -|
 **Africa**
-|af-south-1    |Africa (Cape Town)       |  XXX| XX|
+|af-south-1    |Africa (Cape Town)       |  $0.6980| $0.2094|
 **Asia Pacific**
-|ap-east-1     |Asia Pacific (Hong Kong) |  XXX| XX|
-|ap-south-2    |Asia Pacific (Hyderabad) |  XXX| XX|
-|ap-southeast-3|Asia Pacific (Jakarta)   |  XXX| XX|
-|ap-southeast-4|Asia Pacific (Melbourne) |  XXX| XX|
-|ap-south-1    |Asia Pacific (Mumbai)    |  XXX| XX|
-|ap-northeast-3|Asia Pacific (Osaka)     |  XXX| XX|
-|ap-northeast-2|Asia Pacific (Seoul)     |  XXX| XX|
-|ap-southeast-1|Asia Pacific (Singapore) |  XXX| XX|
-|ap-southeast-2|Asia Pacific (Sydney)    |  XXX| XX|
-|ap-northeast-1|Asia Pacific (Tokyo)     |  XXX| XX|
+|ap-east-1     |Asia Pacific (Hong Kong) |  $0.8100| $0.2430|
+|ap-south-2    |Asia Pacific (Hyderabad) |        -|       -|
+|ap-southeast-3|Asia Pacific (Jakarta)   |        -|       -|
+|ap-southeast-4|Asia Pacific (Melbourne) |        -|       -|
+|ap-south-1    |Asia Pacific (Mumbai)    |  $0.5790| $0.1737|
+|ap-northeast-3|Asia Pacific (Osaka)     |  $0.7100| $0.2130|
+|ap-northeast-2|Asia Pacific (Seoul)     |  $0.6470| $0.1941|
+|ap-southeast-1|Asia Pacific (Singapore) |  $0.7360| $0.2213|
+|ap-southeast-2|Asia Pacific (Sydney)    |  $0.6840| $0.2052|
+|ap-northeast-1|Asia Pacific (Tokyo)     |  $0.7100| $0.2130|
 **Europe**
-|eu-central-1  |Europe (Frankfurt)       |  XXX| XX|
-|eu-west-1     |Europe (Ireland)         |  XXX| XX|
-|eu-west-2     |Europe (London)          |  XXX| XX|
-|eu-south-1    |Europe (Milan)           |  XXX| XX|
-|eu-west-3     |Europe (Paris)           |  XXX| XX|
-|eu-south-2    |Europe (Spain)           |  XXX| XX|
-|eu-north-1    |Europe (Stockholm)       |  XXX| XX|
-|eu-central-2  |Europe (Zurich)          |  XXX| XX|
+|eu-central-1  |Europe (Frankfurt)       |  $0.6580| $0.1974|
+|eu-west-1     |Europe (Ireland)         |  $0.5870| $0.1922|
+|eu-west-2     |Europe (London)          |  $0.6150| $0.1845|
+|eu-south-1    |Europe (Milan)           |  $0.6160| $0.1848|
+|eu-west-3     |Europe (Paris)           |  $0.6150| $0.1845|
+|eu-south-2    |Europe (Spain)           |        -|       -|
+|eu-north-1    |Europe (Stockholm)       |  $0.5580| $0.1674|
+|eu-central-2  |Europe (Zurich)          |        -|       -|
 **Middle East**
-|me-south-1    |Middle East (Bahrain)    |  XXX| XX|
-|me-central-1  |Middle East (UAE)        |  XXX| XX|
+|me-south-1    |Middle East (Bahrain)    |  $0.6450| $0.1935|
+|me-central-1  |Middle East (UAE)        |        -|       -|
 **South America**
-|sa-east-1     |South America (Sao Paulo)|  XXX| XX|
+|sa-east-1     |South America (Sao Paulo)|  $0.8940| $0.2682|
