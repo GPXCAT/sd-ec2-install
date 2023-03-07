@@ -32,10 +32,10 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/do
 ```
 
 ## EC2 instances g4dn.xlarge(Linux) 的 On-Demand 與 SPOT 價錢參考
-@2023-03-07查詢
+### 2023-03-07 記錄
+### **North America**
 |Region Code   |Region Name              |On-Demand|SPOT    |
 |--------------|-------------------------|---------|--------|
-**North America**
 |us-east-1     |US East (N. Virginia)    |  $0.5260| $0.1578|
 |us-east-2     |US East (Ohio)           |  $0.5260| $0.1578|
 |us-west-1     |US West (N. California)  |  $0.6310| $0.1893|
@@ -43,9 +43,13 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/do
 |ca-central-1  |Canada (Central)         |  $0.5840| $0.1752|
 |us-gov-east-1 |AWS GovCloud (US-East)   |  $0.6630|       -|
 |us-gov-west-1 |AWS GovCloud (US-West)   |  $0.6630|       -|
-**Africa**
+### **Africa**
+|Region Code   |Region Name              |On-Demand|SPOT    |
+|--------------|-------------------------|---------|--------|
 |af-south-1    |Africa (Cape Town)       |  $0.6980| $0.2094|
-**Asia Pacific**
+### **Asia Pacific**
+|Region Code   |Region Name              |On-Demand|SPOT    |
+|--------------|-------------------------|---------|--------|
 |ap-east-1     |Asia Pacific (Hong Kong) |  $0.8100| $0.2430|
 |ap-south-2    |Asia Pacific (Hyderabad) |        -|       -|
 |ap-southeast-3|Asia Pacific (Jakarta)   |        -|       -|
@@ -56,7 +60,9 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/do
 |ap-southeast-1|Asia Pacific (Singapore) |  $0.7360| $0.2213|
 |ap-southeast-2|Asia Pacific (Sydney)    |  $0.6840| $0.2052|
 |ap-northeast-1|Asia Pacific (Tokyo)     |  $0.7100| $0.2130|
-**Europe**
+### **Europe**
+|Region Code   |Region Name              |On-Demand|SPOT    |
+|--------------|-------------------------|---------|--------|
 |eu-central-1  |Europe (Frankfurt)       |  $0.6580| $0.1974|
 |eu-west-1     |Europe (Ireland)         |  $0.5870| $0.1922|
 |eu-west-2     |Europe (London)          |  $0.6150| $0.1845|
@@ -65,8 +71,12 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/do
 |eu-south-2    |Europe (Spain)           |        -|       -|
 |eu-north-1    |Europe (Stockholm)       |  $0.5580| $0.1674|
 |eu-central-2  |Europe (Zurich)          |        -|       -|
-**Middle East**
+### **Middle East**
+|Region Code   |Region Name              |On-Demand|SPOT    |
+|--------------|-------------------------|---------|--------|
 |me-south-1    |Middle East (Bahrain)    |  $0.6450| $0.1935|
 |me-central-1  |Middle East (UAE)        |        -|       -|
-**South America**
+### **South America**
+|Region Code   |Region Name              |On-Demand|SPOT    |
+|--------------|-------------------------|---------|--------|
 |sa-east-1     |South America (Sao Paulo)|  $0.8940| $0.2682|
