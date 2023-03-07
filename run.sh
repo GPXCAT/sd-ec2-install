@@ -1,9 +1,8 @@
 #!/bin/sh
 
-# 格式化內建的儲存區
-USER=ubuntu
-HOME_DIR=/data
-SDW_DIR=${HOME_DIR}/stable-diffusion-webui
+# 系統變數
+USER=$(whoami)
+SDW_DIR=${HOME}/stable-diffusion-webui
 
 # 執行
 cd ${SDW_DIR}

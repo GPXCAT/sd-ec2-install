@@ -1,43 +1,26 @@
 #!/bin/sh
 
 # 系統變數
-USER=ubuntu
-HOME_DIR=/data
-SDW_DIR=${HOME_DIR}/stable-diffusion-webui
-ARCH=$(arch)
-DRIVER_BASE_URL=https://us.download.nvidia.com/tesla
-DRIVER_VERSION=525.85.12
-
-# 內建的nvme1
-if [ ! -d "/data" ]
-then
-    sudo file -s /dev/nvme1n1
-    sudo mkfs -t xfs /dev/nvme1n1
-    sudo mkdir /data
-    sudo mount /dev/nvme1n1 /data
-    sudo chown ${USER}.${USER} /data
-    echo '/dev/nvme1n1 /data ext4 discard,defaults,nofail 0 2' | sudo tee -a /etc/fstab
-fi
+USER=$(whoami)
+SDW_DIR=${HOME}/stable-diffusion-webui
 
 # 安裝系統套件
 sudo apt update
 sudo apt install -y wget curl aria2 \
-                    make gcc g++ \
-                    python3.10-venv python3-pip
+                    build-essential python3-venv python3-pip
 
 # 安裝顯示卡驅動
 # https://www.nvidia.com/Download/Find.aspx
-if [ ! -f "/root/.nvdirve_installed" ]
+if [ ! -f "/.cuda_installed" ]
 then
-    cd /tmp
-    curl -fSsl -O $DRIVER_BASE_URL/$DRIVER_VERSION/NVIDIA-Linux-$ARCH-$DRIVER_VERSION.run
-    sudo sh NVIDIA-Linux-$ARCH-$DRIVER_VERSION.run -s
-    rm NVIDIA-Linux-$ARCH-$DRIVER_VERSION.run
-    sudo touch /root/.nvdirve_installed
+    wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run -O /tmp/cuda_12.1.0_530.30.02_linux.run
+    sudo sh /tmp/cuda_12.1.0_530.30.02_linux.run --silent
+    rm /tmp/cuda_12.1.0_530.30.02_linux.run
+    sudo touch /.cuda_installed
 fi
 
 # 安裝stable-diffusion-webui
-cd ${HOME_DIR}
+cd ${HOME}
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 # 安裝外掛模組

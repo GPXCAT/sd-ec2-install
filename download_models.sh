@@ -1,9 +1,8 @@
 #!/bin/sh
 
 # 系統變數
-USER=ubuntu
-HOME_DIR=/data
-SDW_DIR=${HOME_DIR}/stable-diffusion-webui
+USER=$(whoami)
+SDW_DIR=${HOME}/stable-diffusion-webui
 
 # 安裝模型[CHECKPOINT TRAINED]
 MODEL_CHECKPOINT_DIR=${SDW_DIR}/models/Stable-diffusion
