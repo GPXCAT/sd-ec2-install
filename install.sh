@@ -40,9 +40,6 @@ fi
 cd ${HOME_DIR}
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
-# 同步安裝模型檔
-bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/download_models.sh) &
-
 # 安裝外掛模組
 cd ${SDW_DIR}/extensions
 git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
