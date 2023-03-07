@@ -49,7 +49,8 @@ git clone https://github.com/kohya-ss/sd-webui-additional-networks.git
 git clone https://github.com/Mikubill/sd-webui-controlnet.git
 git clone https://github.com/civitai/sd_civitai_extension.git
 git clone https://github.com/jexom/sd-webui-depth-lib.git
+git clone https://github.com/camenduru/sd-civitai-browser.git
 
 # 執行
 cd ${SDW_DIR}
-./webui.sh --listen --xformers
+./webui.sh --listen --share --xformers --enable-insecure-extension-access

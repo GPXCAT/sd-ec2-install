@@ -7,4 +7,4 @@ SDW_DIR=${HOME_DIR}/stable-diffusion-webui
 
 # 執行
 cd ${SDW_DIR}
-./webui.sh --listen --xformers
+./webui.sh --listen --share --xformers --enable-insecure-extension-access
