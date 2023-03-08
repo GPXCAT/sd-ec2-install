@@ -2,6 +2,7 @@
 這是我自己使用的安裝 Script
 
 ## Launch EC2 SPOT instances
+### https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html
 ```bash
 REGION=us-east-1
 INSTANCE_TYPE=g4dn.xlarge
@@ -9,6 +10,7 @@ AMI_IMAGE=ami-0557a15b87f6559cf
 EBS_GB_SIZE=100
 KEY_PAIR_NAME=stable-diffusion-webui
 SECURITY_GROUP_ID=sg-0f90be5d16639339e
+MAX_PRICE=0.17
 
 aws ec2 run-instances \
     --count 1 \
@@ -16,8 +18,21 @@ aws ec2 run-instances \
     --image-id ${AMI_IMAGE} \
     --key-name ${KEY_PAIR_NAME} \
     --security-group-ids ${SECURITY_GROUP_ID} \
-    --instance-market-options '{"MarketType":"spot","SpotOptions":{"InstanceInterruptionBehavior":"terminate","MaxPrice":"0.2","SpotInstanceType":"one-time"}}' \
-    --block-device-mappings '{"DeviceName":"/dev/sda1","Ebs":{"VolumeSize":'${EBS_GB_SIZE}',"VolumeType":"gp3"}}' \
+    --instance-market-options '{
+        "MarketType": "spot",
+        "SpotOptions": {
+            "MaxPrice": "'${MAX_PRICE}'",
+            "SpotInstanceType": "persistent",
+            "InstanceInterruptionBehavior": "stop"
+        }
+    }' \
+    --block-device-mappings '{
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+            "VolumeSize": '${EBS_GB_SIZE}',
+            "VolumeType": "gp3"
+        }
+    }' \
     --region ${REGION}
 ```
 
