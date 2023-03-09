@@ -22,7 +22,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 # [GTA5 Artwork Diffusion] https://civitai.com/models/1309
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/1393 -d ${MODEL_CHECKPOINT_DIR} -o gta5ArtworkDiffusion_v1.ckpt
 # [MeinaMix] https://civitai.com/models/7240
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/16925 -d ${MODEL_CHECKPOINT_DIR} -o meinamix_meinaV7.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/20322 -d ${MODEL_CHECKPOINT_DIR} -o meinamix_meinaV8.safetensors
 # [Grapefruit (hentai model)] https://civitai.com/models/2583
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/16619 -d ${MODEL_CHECKPOINT_DIR} -o grapefruitHentaiModel_grapefruitv41.safetensors
 # [Counterfeit-V2.5] https://civitai.com/models/4468
