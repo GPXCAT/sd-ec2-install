@@ -33,6 +33,7 @@ git clone https://github.com/camenduru/sd-civitai-browser.git
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser.git
 git clone https://github.com/camenduru/deforum-for-automatic1111-webui.git
 git clone https://github.com/camenduru/sd-webui-tunnels.git
+git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git
 
 # 執行
 cd ${SDW_DIR}
