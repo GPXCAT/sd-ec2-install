@@ -45,6 +45,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Japanese-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Japanese-doll-likeness.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Korean-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Korean-doll-likeness.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Taiwan-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Taiwan-doll-likeness.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/ulzzang-6500.pt -d ${MODEL_LORA_DIR} -o ulzzang-6500.pt
 # [Arknights-Texas the Omertosa] https://civitai.com/models/6779
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7974 -d ${MODEL_LORA_DIR} -o arknightsTexasThe_v10.safetensors
 # [RainMix] https://civitai.com/models/16564
