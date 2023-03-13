@@ -29,6 +29,8 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7425 -d ${MODEL_CHECKPOINT_DIR} -o CounterfeitV25_25.safetensors
 # [Realistic Vision V1.3 - Fantasy.ai] https://civitai.com/models/4201
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/6987 -d ${MODEL_CHECKPOINT_DIR} -o realisticVisionV13_v13.safetensors
+# [RainMix] https://civitai.com/models/16564
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/19556 -d ${MODEL_CHECKPOINT_DIR} -o rainmix_10.ckpt
 
 # 安裝模型[LORA]
 MODEL_LORA_DIR=${SDW_DIR}/models/Lora
@@ -48,8 +50,6 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Ano
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/ulzzang-6500.pt -d ${MODEL_LORA_DIR} -o ulzzang-6500.pt
 # [Arknights-Texas the Omertosa] https://civitai.com/models/6779
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7974 -d ${MODEL_LORA_DIR} -o arknightsTexasThe_v10.safetensors
-# [RainMix] https://civitai.com/models/16564
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/19556 -d ${MODEL_LORA_DIR} -o rainmix_10.ckpt
 
 # 安裝模型[ControlNet]
 MODEL_CONTROLNET_DIR=${SDW_DIR}/models/ControlNet
