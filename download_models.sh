@@ -51,6 +51,12 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Ano
 # [Arknights-Texas the Omertosa] https://civitai.com/models/6779
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7974 -d ${MODEL_LORA_DIR} -o arknightsTexasThe_v10.safetensors
 
+# 安裝模型[VAE]
+MODEL_VAE_DIR=${SDW_DIR}/models/VAE
+mkdir -p $MODEL_VAE_DIR
+# [VAE] https://huggingface.co/stabilityai/sd-vae-ft-mse-original
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d ${MODEL_VAE_DIR} -o vae-ft-mse-840000-ema-pruned.safetensors
+
 # 安裝模型[ControlNet]
 MODEL_CONTROLNET_DIR=${SDW_DIR}/models/ControlNet
 mkdir -p $MODEL_CONTROLNET_DIR
