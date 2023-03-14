@@ -46,6 +46,31 @@ bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/in
 bash <(wget -qO- https://raw.githubusercontent.com/GPXCAT/sd-ec2-install/main/download_models.sh)
 ```
 
+## 透過 Supervisor
+### 安裝
+```bash
+sudo apt update
+sudo apt install -y supervisor
+```
+
+### 寫入設定
+```bash
+echo '[program:stable-diffusion-webui]
+directory=/home/ubuntu/stable-diffusion-webui
+command=/home/ubuntu/stable-diffusion-webui/webui.sh --listen --share --xformers --enable-insecure-extension-access
+autostart=true
+autorestart=true
+user=ubuntu
+redirect_stderr=true
+stdout_logfile=/var/log/supervisor/stable-diffusion-webui.log
+' | sudo tee /etc/supervisor/conf.d/stable-diffusion-webui.conf
+```
+
+### 重啟服務
+```bash
+sudo systemctl restart supervisor
+```
+
 ## EC2 instances g4dn.xlarge(Linux) 的 On-Demand 與 SPOT 價錢參考
 ### 2023-03-07 記錄
 ### **North America**
