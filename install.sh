@@ -7,7 +7,7 @@ SDW_DIR=${HOME}/stable-diffusion-webui
 # 安裝系統套件
 sudo apt update
 sudo apt install -y wget git aria2 \
-                    build-essential python3-venv python3-pip
+                    build-essential python3-venv python3-pip libgl1
 
 # 安裝顯示卡驅動
 # https://www.nvidia.com/Download/Find.aspx
