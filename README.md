@@ -35,6 +35,7 @@ aws ec2 run-instances \
     }' \
     --region ${REGION}
 ```
+<mark>若要收掉主機 請記得去看 https://console.aws.amazon.com/ec2/home#SpotInstances 頁面以免一直自動產生新的主機</mark>
 
 ## 安裝 Nvidia Driver 與 Stable Diffusion web UI
 ```bash
