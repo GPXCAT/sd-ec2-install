@@ -9,9 +9,13 @@ RUN apt update && \
         wget git build-essential python3-venv python3-pip libgl1 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN adduser -q sduser
+RUN adduser -q sduser && mkdir /venv && chown sduser.sduser /venv
 USER sduser
 WORKDIR /app/stable-diffusion-webui
+
+RUN python3 -m venv /venv
+ENV PATH=/venv/bin:$PATH
+
 RUN pip3 install --upgrade pip
 RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git /app/stable-diffusion-webui
 RUN pip install -r requirements_versions.txt
@@ -29,8 +33,10 @@ RUN adduser -q sduser
 USER sduser
 WORKDIR /app/stable-diffusion-webui
 
-# COPY --from=build-env /venv /venv
+COPY --from=build-env /venv /venv
 COPY --from=build-env /app /app
 ENV PATH=/venv/bin:$PATH
 
-ENTRYPOINT [ "python3", "-u", "aniGamerPlus.py" ]
+ENV CLI_ARGS=""
+EXPOSE 7860
+ENTRYPOINT [ "./webui.sh", "--skip-torch-cuda-test" ]

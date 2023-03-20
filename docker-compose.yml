@@ -9,6 +9,7 @@ services:
     container_name: "stable-diffusion-webui"
     environment:
       TZ: Asia/Taipei
+      CLI_ARGS: --no-half --precision full --allow-code --enable-insecure-extension-access --api --skip-torch-cuda-test
     # volumes:
     #   - type: bind
     #     source: ./config.json
