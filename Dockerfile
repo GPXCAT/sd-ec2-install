@@ -19,6 +19,7 @@ ENV PATH=/venv/bin:$PATH
 RUN pip3 install --upgrade pip
 RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git /app/stable-diffusion-webui
 RUN pip install -r requirements_versions.txt
+RUN PIP_NO_CACHE_DIR=1 pip install torch==1.13.1+cu117 torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
 # final stage
 FROM ${PYTHON}
