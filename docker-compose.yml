@@ -10,19 +10,9 @@ services:
     environment:
       TZ: Asia/Taipei
     # volumes:
-    #   - "./bangumi:/app/bangumi"
     #   - type: bind
     #     source: ./config.json
     #     target: /app/config.json
-    #   - type: bind
-    #     source: ./aniGamer.db
-    #     target: /app/aniGamer.db
-    #   - type: bind
-    #     source: ./cookie.txt
-    #     target: /app/cookie.txt
-    #   - type: bind
-    #     source: ./sn_list.txt
-    #     target: /app/sn_list.txt
     ports:
       - "5001:5000"
     restart: unless-stopped
