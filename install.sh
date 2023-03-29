@@ -34,6 +34,8 @@ git clone https://github.com/camenduru/stable-diffusion-webui-images-browser.git
 git clone https://github.com/camenduru/deforum-for-automatic1111-webui.git
 git clone https://github.com/camenduru/sd-webui-tunnels.git
 git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git
+git clone https://github.com/space-nuko/a1111-stable-diffusion-webui-vram-estimator.git
+git clone https://github.com/vladmandic/sd-extension-system-info.git
 
 # 執行
 cd ${SDW_DIR}
