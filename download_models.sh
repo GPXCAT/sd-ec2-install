@@ -70,10 +70,10 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 # [ChilloutMixss] https://civitai.com/models/10850
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/12876 -d ${MODEL_LORA_DIR}
 # [ChilloutMix] https://huggingface.co/AnonPerson/ChilloutMix
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Japanese-doll-likeness.safetensors -d ${MODEL_LORA_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Korean-doll-likeness.safetensors -d ${MODEL_LORA_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Taiwan-doll-likeness.safetensors -d ${MODEL_LORA_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/ulzzang-6500.pt -d ${MODEL_LORA_DIR}
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Japanese-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Japanese-doll-likeness.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Korean-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Korean-doll-likeness.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/Taiwan-doll-likeness.safetensors -d ${MODEL_LORA_DIR} -o Taiwan-doll-likeness.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/AnonPerson/ChilloutMix/resolve/main/ulzzang-6500.pt -d ${MODEL_LORA_DIR} -o ulzzang-6500.pt
 # [Arknights-Texas the Omertosa] https://civitai.com/models/6779
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/7974 -d ${MODEL_LORA_DIR}
 
@@ -81,19 +81,19 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/do
 MODEL_VAE_DIR=${SDW_DIR}/models/VAE
 mkdir -p $MODEL_VAE_DIR
 # [VAE] https://huggingface.co/stabilityai/sd-vae-ft-mse-original
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d ${MODEL_VAE_DIR}
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d ${MODEL_VAE_DIR} -o vae-ft-mse-840000-ema-pruned.safetensors
 
 # 安裝模型[ControlNet]
 MODEL_CONTROLNET_DIR=${SDW_DIR}/models/ControlNet
 mkdir -p $MODEL_CONTROLNET_DIR
 # [ControlNet] https://huggingface.co/lllyasviel/ControlNet
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_canny.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_depth.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_hed.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_mlsd.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_normal.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_openpose.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_scribble.pth -d ${MODEL_CONTROLNET_DIR}
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_seg.pth -d ${MODEL_CONTROLNET_DIR}
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_canny.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_canny.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_depth.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_depth.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_hed.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_hed.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_mlsd.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_mlsd.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_normal.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_normal.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_openpose.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_openpose.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_scribble.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_scribble.pth
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_seg.pth -d ${MODEL_CONTROLNET_DIR} -o control_sd15_seg.pth
 
 echo "下載完成"
